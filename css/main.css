@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+body {
+  background: #d3d3d3;
+}
+
+header {
+  background: #af4f3e;
+}
+
+header>div {
+  max-width: 1000px;
+  margin: auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 3em;
+}
+
+main {
+  background: #ba7d71;
+  padding: 90px 0;
+}
+
+.wrap {
+  width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 50px 0;
+}
+
+section:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.item {
+  float: left; 
+  position: relative;
+  margin: 20px;
+  width: 260px;
+  height: 260px;
+  cursor: pointer;
+ 
+}
+
+.item img {
+  width: 100%;
+}
+
+.area {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.artist {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.info {
+  color: rgba(250, 246, 246, 0.4)
+}
+
+.item:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 20px rgba(240, 105, 38, 0.7),
+    inset 0 0 10px rgba(226, 197, 183, 0.7);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.item.active:after {
+  opacity: 1;
+}
+
+.first .area {
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  padding: 20px;
+  opacity: 0;
+}
+
+.second {}
+
+.second .item {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.second .item:after {
+  border-radius: 50%;
+}
+
+.second .area {
+  top: 50%;
+  left: -100%;
+  padding: 10px;
+  transform: translateY(-50%);
+  padding:10px;
+  text-align: center;
+}
+
+
+.third {}
+
+.third .area {
+  position: absolute;
+  width:100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+}
+
+.third .area p {
+  position: relative;
+  bottom: -60px;
+}
+
+.third .info {
+  display: block
+}
+
+.third .artist {
+  display: inline-block;
+  border-bottom: 2px solid white;
+  padding: 10px 0 5px 0;
+  font-size: 1em;
+}
+
+.third .item:after {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.fourth {}
+.fourth .item {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.fourth .area {
+  position: absolute;
+  width:100%;
+  height:100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+}
+.fourth .area img {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.fourth p {
+  padding-top:5px;
+  line-height:1.2;
+}
+
+
+.fourth .item:after {
+  box-shadow: none;
+}
+
+
+
+
+
+
+footer {
+  padding: 30px 0
+}
+
+footer>div {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+footer small {
+  color: #fff;
+  font-size: 0.8em;
+}
